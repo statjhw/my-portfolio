@@ -6,7 +6,7 @@ import { GitHubLogoIcon, LinkedInLogoIcon, EnvelopeClosedIcon } from '@radix-ui/
 const socialLinks = [
   {
     name: 'GitHub',
-    href: 'https://github.com',
+    href: 'https://github.com/statjhw',
     icon: GitHubLogoIcon,
     hoverColor: 'hover:text-gray-900 dark:hover:text-white',
   },

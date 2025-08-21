@@ -7,12 +7,12 @@ import { GitHubLogoIcon, LinkedInLogoIcon, EnvelopeClosedIcon } from '@radix-ui/
 const socialLinks = [
   {
     name: 'GitHub',
-    href: 'https://github.com',
+    href: 'https://github.com/statjhw',
     icon: GitHubLogoIcon,
   },
   {
     name: 'LinkedIn',
-    href: 'https://linkedin.com',
+    href: 'https://linkedin.com/in/yourusername',
     icon: LinkedInLogoIcon,
   },
   {

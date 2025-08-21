@@ -14,8 +14,8 @@ const contactInfo = [
   {
     icon: GitHubLogoIcon,
     label: 'GitHub',
-    value: 'github.com/username',
-    href: 'https://github.com',
+    value: 'github.com/statjhw',
+    href: 'https://github.com/statjhw',
   },
   {
     icon: LinkedInLogoIcon,

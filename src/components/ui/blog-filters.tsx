@@ -50,7 +50,7 @@ export function BlogFilters({
       {/* Category Filter */}
       <div className="w-full md:w-48">
         <Select value={selectedCategory} onValueChange={onCategoryChange}>
-          <SelectTrigger>
+          <SelectTrigger className="bg-green-50 dark:bg-green-950/50 border-green-200 dark:border-green-800">
             <SelectValue placeholder="All Categories" />
           </SelectTrigger>
           <SelectContent>
@@ -66,7 +66,7 @@ export function BlogFilters({
       {/* Tag Filter */}
       <div className="w-full md:w-48">
         <Select value={selectedTag} onValueChange={onTagChange}>
-          <SelectTrigger>
+          <SelectTrigger className="bg-green-50 dark:bg-green-950/50 border-green-200 dark:border-green-800">
             <BookmarkIcon className="h-4 w-4 mr-2" />
             <SelectValue placeholder="All Tags" />
           </SelectTrigger>

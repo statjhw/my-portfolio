@@ -100,7 +100,7 @@ export default function RootLayout({
             url="https://yourportfolio.com"
             email="contact@example.com"
             sameAs={[
-              "https://github.com/yourusername",
+              "https://github.com/statjhw",
               "https://linkedin.com/in/yourusername",
               "https://twitter.com/yourusername"
             ]}
