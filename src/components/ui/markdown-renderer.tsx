@@ -56,15 +56,14 @@ export function MarkdownRenderer({ content, className = '' }: MarkdownRendererPr
             <li className="leading-relaxed">{children}</li>
           ),
           // Customize code styles
-          code: (props: { className?: string; children?: React.ReactNode; node?: { tagName?: string } }) => {
-            const { className, children } = props
-            const inline = props.node?.tagName !== 'pre'
+          code: ({ className, children }: { className?: string; children?: React.ReactNode }) => {
             const match = /language-(\w+)/.exec(className || '')
             const language = match ? match[1] : ''
+            const inline = !className || className.indexOf('language-') === -1
             
             if (inline) {
               return (
-                <code className="bg-muted px-2 py-1 rounded text-sm font-mono text-foreground" {...props}>
+                <code className="bg-muted px-2 py-1 rounded text-sm font-mono text-foreground">
                   {children}
                 </code>
               )
@@ -72,9 +71,10 @@ export function MarkdownRenderer({ content, className = '' }: MarkdownRendererPr
 
             // Handle Mermaid diagrams
             if (language === 'mermaid') {
+              const chartContent = String(children).replace(/\n$/, '')
               return (
                 <div className="my-6">
-                  <MermaidDiagram chart={String(children).replace(/\n$/, '')} />
+                  <MermaidDiagram chart={chartContent} />
                 </div>
               )
             }
@@ -82,7 +82,7 @@ export function MarkdownRenderer({ content, className = '' }: MarkdownRendererPr
             return (
               <div className="relative">
                 <pre className="bg-muted p-4 rounded-lg overflow-x-auto mb-4">
-                  <code className={`text-sm font-mono text-foreground ${className}`} {...props}>
+                  <code className={`text-sm font-mono text-foreground ${className}`}>
                     {children}
                   </code>
                 </pre>

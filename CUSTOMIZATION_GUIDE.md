@@ -91,7 +91,7 @@ export const projects: Project[] = [
     technologies: ['React', 'TypeScript', 'Node.js'],  // 기술 스택
     category: 'web',  // 'web', 'mobile', 'desktop', 'api'
     githubUrl: 'https://github.com/username/project',  // GitHub URL (선택)
-    liveUrl: 'https://project-demo.com',  // 라이브 데모 URL (선택)
+    liveUrl: 'https://mmd-rose.vercel.app/',  // 라이브 데모 URL (선택)
     featured: false,  // 메인 페이지 featured 섹션에 표시 여부
     startDate: '2024-01',  // 시작 날짜
     endDate: '2024-06',  // 종료 날짜 (진행 중이면 생략)
