@@ -24,6 +24,8 @@ const categoryIcons = {
   api: '⚡',
   ai: '🤖',
   'data pipeline': '📊',
+  tool: '🔧',
+  statistics: '📈',
 }
 
 export function ProjectCard({ project, index }: ProjectCardProps) {
@@ -35,7 +37,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
       transition: {
         duration: 0.6,
         delay: index * 0.1,
-        ease: 'easeOut',
+        ease: 'easeOut' as const,
       },
     },
   }

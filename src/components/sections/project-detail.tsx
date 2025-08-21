@@ -24,6 +24,8 @@ const categoryIcons = {
   api: '⚡',
   ai: '🤖',
   'data pipeline': '📊',
+  tool: '🔧',
+  statistics: '📈',
 }
 
 export function ProjectDetail({ project }: ProjectDetailProps) {

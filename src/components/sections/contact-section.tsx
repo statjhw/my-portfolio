@@ -64,8 +64,8 @@ export function ContactSection() {
           Get In Touch
         </h1>
         <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-          Have a project in mind or want to collaborate? I'd love to hear from you.
-          Drop me a message and I'll get back to you as soon as possible.
+          Have a project in mind or want to collaborate? I&apos;d love to hear from you.
+          Drop me a message and I&apos;ll get back to you as soon as possible.
         </p>
       </motion.div>
 

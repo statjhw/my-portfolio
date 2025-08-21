@@ -3,7 +3,7 @@
 import { useEffect } from 'react'
 import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals'
 
-function sendToAnalytics(metric: any) {
+function sendToAnalytics(metric: { name: string; value: number; id: string }) {
   // 개발 환경에서는 콘솔에 출력
   if (process.env.NODE_ENV === 'development') {
     console.log('Web Vitals:', metric)

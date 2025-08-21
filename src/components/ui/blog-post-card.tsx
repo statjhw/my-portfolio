@@ -20,7 +20,7 @@ export function BlogPostCard({ post, index }: BlogPostCardProps) {
       transition: {
         duration: 0.6,
         delay: index * 0.1,
-        ease: 'easeOut',
+        ease: 'easeOut' as const,
       },
     },
   }

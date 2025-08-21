@@ -275,5 +275,29 @@ docs/
 
 ---
 
-📝 **마지막 업데이트**: 2024년 8월 18일
+## 🚀 Vercel 배포 안내
+
+### 배포 상태
+✅ **배포 준비 완료**: 모든 빌드 에러 해결됨
+- 프로덕션 빌드 성공
+- ESLint 경고만 존재 (배포 차단하지 않음)
+- 모든 배포 설정 파일 준비됨
+
+### 배포 관련 파일
+- `vercel.json`: Vercel 배포 설정
+- `.env.example`: 환경 변수 템플릿
+- `DEPLOYMENT_GUIDE.md`: 상세 배포 가이드
+
+### 빠른 배포 방법
+```bash
+# Vercel CLI를 통한 배포
+npm install -g vercel
+vercel
+```
+
+또는 GitHub에 푸시 후 Vercel 대시보드에서 연동
+
+---
+
+📝 **마지막 업데이트**: 2025년 8월 21일
 🔗 **관련 파일**: `src/components/ui/markdown-renderer.tsx`, `src/components/ui/mermaid-diagram.tsx`

@@ -56,7 +56,8 @@ export function MarkdownRenderer({ content, className = '' }: MarkdownRendererPr
             <li className="leading-relaxed">{children}</li>
           ),
           // Customize code styles
-          code: ({ inline, className, children, ...props }) => {
+          code: ({ className, children, ...props }: any) => {
+            const inline = props.node?.tagName !== 'pre'
             const match = /language-(\w+)/.exec(className || '')
             const language = match ? match[1] : ''
             
