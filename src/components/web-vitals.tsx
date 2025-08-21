@@ -10,13 +10,7 @@ function sendToAnalytics(metric: { name: string; value: number; id: string }) {
   }
   
   // 프로덕션에서는 분석 도구로 전송 (예: Google Analytics)
-  if (typeof window !== 'undefined' && window.gtag) {
-    window.gtag('event', metric.name, {
-      custom_parameter_1: metric.value,
-      custom_parameter_2: metric.id,
-      custom_parameter_3: metric.name,
-    })
-  }
+  // 현재는 개발용으로만 콘솔 출력, 실제 분석 도구는 나중에 연동
 }
 
 export function WebVitals() {
