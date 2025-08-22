@@ -1,9 +1,9 @@
 'use client'
 
+import React from 'react'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import rehypeHighlight from 'rehype-highlight'
-import rehypeRaw from 'rehype-raw'
 import 'highlight.js/styles/github.css'
 import { MermaidDiagram } from './mermaid-diagram'
 
@@ -17,7 +17,7 @@ export function MarkdownRenderer({ content, className = '' }: MarkdownRendererPr
     <div className={`prose dark:prose-invert max-w-none ${className}`}>
       <ReactMarkdown
         remarkPlugins={[remarkGfm]}
-        rehypePlugins={[rehypeHighlight, rehypeRaw]}
+        rehypePlugins={[rehypeHighlight]}
         components={{
           // Customize heading styles
           h1: ({ children }) => (
@@ -35,12 +35,20 @@ export function MarkdownRenderer({ content, className = '' }: MarkdownRendererPr
               {children}
             </h3>
           ),
-          // Customize paragraph styles
-          p: ({ children }) => (
-            <p className="mb-4 leading-relaxed text-foreground/90 dark:text-foreground/95">
-              {children}
-            </p>
-          ),
+          // Customize paragraph styles  
+          p: ({ children }) => {
+            // Check if children contains only whitespace or empty content
+            const textContent = React.Children.toArray(children).join('').trim();
+            if (!textContent) {
+              return null;
+            }
+            
+            return (
+              <p className="mb-4 leading-relaxed text-foreground/90 dark:text-foreground/95">
+                {children}
+              </p>
+            );
+          },
           // Customize list styles
           ul: ({ children }) => (
             <ul className="mb-4 ml-6 space-y-2 list-disc text-foreground/90 dark:text-foreground/95">
@@ -108,18 +116,18 @@ export function MarkdownRenderer({ content, className = '' }: MarkdownRendererPr
           ),
           // Customize image styles
           img: ({ src, alt }) => (
-            <div className="my-6">
+            <figure className="my-6">
               <img
                 src={src}
                 alt={alt}
                 className="rounded-lg shadow-lg w-full h-auto"
               />
               {alt && (
-                <p className="text-sm text-muted-foreground text-center mt-2 italic">
+                <figcaption className="text-sm text-muted-foreground text-center mt-2 italic">
                   {alt}
-                </p>
+                </figcaption>
               )}
-            </div>
+            </figure>
           ),
           // Customize table styles
           table: ({ children }) => (

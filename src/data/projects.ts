@@ -96,7 +96,7 @@ graph LR
     technologies: ['Python','Airflow', 'AWS', 'DynamoDB', 'OpenSearch', 'LangGraph', 'Sentence-Transformers', 'FastAPI', 'Redis', 'Vite', 'React', 'TypeScript', 'Docker', 'Railway', 'Vercel'],
     category: 'ai',
     githubUrl: 'https://github.com/statjhw/MangMangDae-AI',
-    liveUrl: 'https://example.com',
+    liveUrl: 'https://mmd-rose.vercel.app/',
     featured: true,
     startDate: '2025-04',
     endDate: '2025-08',

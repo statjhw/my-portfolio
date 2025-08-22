@@ -107,15 +107,6 @@ export function BlogPostDetail({ post }: BlogPostDetailProps) {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="lg:col-span-3"
         >
-          {/* Cover Image Placeholder */}
-          <div className="relative h-64 md:h-96 bg-gradient-to-br from-primary/20 via-primary/10 to-primary/5 rounded-lg flex items-center justify-center overflow-hidden mb-12">
-            <div className="text-8xl opacity-30">📝</div>
-            <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
-            <div className="absolute bottom-4 left-4 text-sm text-muted-foreground">
-              Cover Image Placeholder
-            </div>
-          </div>
-
           {/* Article Content */}
           <DynamicMarkdownRenderer content={post.content} />
         </motion.main>

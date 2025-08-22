@@ -50,7 +50,7 @@ export function ProjectFilters({
       {/* Category Filter */}
       <div className="w-full md:w-48">
         <Select value={selectedCategory} onValueChange={onCategoryChange}>
-          <SelectTrigger className="bg-orange-50 dark:bg-orange-950/50 border-orange-200 dark:border-orange-800">
+          <SelectTrigger className="bg-orange-50 dark:bg-orange-900/10 border-orange-200 dark:border-orange-800/30">
             <SelectValue placeholder="All Categories" />
           </SelectTrigger>
           <SelectContent>
@@ -66,7 +66,7 @@ export function ProjectFilters({
       {/* Technology Filter */}
       <div className="w-full md:w-48">
         <Select value={selectedTechnology} onValueChange={onTechnologyChange}>
-          <SelectTrigger className="bg-orange-50 dark:bg-orange-950/50 border-orange-200 dark:border-orange-800">
+          <SelectTrigger className="bg-orange-50 dark:bg-orange-900/10 border-orange-200 dark:border-orange-800/30">
             <SelectValue placeholder="All Technologies" />
           </SelectTrigger>
           <SelectContent>
